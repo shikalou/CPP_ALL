@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/16 20:53:14 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/08/17 12:37:52 by ldinaut          ###   ########.fr       */
+/*   Created: 2022/08/16 23:00:40 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/08/18 00:14:07 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "Contact.hpp"
+#include "Phonebook.hpp"
 
-void	strup(std::string str)
+int	main()
 {
-	for (size_t i = 0; i < str.length(); i++)
-	{
-		std::cout << (char)std::toupper(str[i]);
-	}
-}
+	Phonebook toto;
+	std::string cmd;
+	int	i;
 
-int	main(int ac, char *av[])
-{
-	switch (ac)
+	i = 0;
+	while (1)
 	{
-		case 1:
-			std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-			break ;
-		default:
-			for (int i = 0; i < ac; ++i)
-			{
-				strup(av[i]);
-			}
-			std::cout << std::endl;
+		std::cout << "enter cmd > ";
+		getline(std::cin, cmd);
+	
+		if (cmd == "ADD" && i < 8)
+		{
+			toto.createContact(i);
+			i++;
+		}
+		else if (cmd == "SEARCH")
+			toto.printContact();
+		else if (cmd == "EXIT")
+			return (0);
+	std::cout << "" << std::endl;
 	}
 	return (0);
 }
