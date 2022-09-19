@@ -5,36 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/16 23:00:40 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/08/18 00:14:07 by ldinaut          ###   ########.fr       */
+/*   Created: 2022/09/19 13:04:23 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/09/19 18:02:56 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
 #include "Phonebook.hpp"
+#include "Contact.hpp"
 
-int	main()
+int main()
 {
-	Phonebook toto;
-	std::string cmd;
-	int	i;
+	Phonebook	phonebook;
+	std::string	cmd;
+	int			i;
 
 	i = 0;
 	while (1)
 	{
-		std::cout << "enter cmd > ";
+		std::cout << "Choose between ADD, SEARCH or EXIT" << std::endl << "enter cmd > ";
 		getline(std::cin, cmd);
-	
-		if (cmd == "ADD" && i < 8)
+		if (cmd == "ADD")
 		{
-			toto.createContact(i);
+			phonebook.CreateContact(i);
 			i++;
 		}
 		else if (cmd == "SEARCH")
-			toto.printContact();
+		{
+			phonebook.PrintContact();
+		}
 		else if (cmd == "EXIT")
 			return (0);
-	std::cout << "" << std::endl;
 	}
-	return (0);
 }

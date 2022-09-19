@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/08/16 22:59:53 by ldinaut           #+#    #+#              #
-#    Updated: 2022/08/17 18:56:03 by ldinaut          ###   ########.fr        #
+#    Created: 2022/09/19 13:04:45 by ldinaut           #+#    #+#              #
+#    Updated: 2022/09/19 14:18:34 by ldinaut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+
 NAME		=	phonebook
 
-SRCS		=	\
-	main.cpp \
-	Contact.cpp \
-	Phonebook.cpp 
+SRCS		=	main.cpp \
+				Phonebook.cpp \
+				Contact.cpp
 
 CC			=	c++
 

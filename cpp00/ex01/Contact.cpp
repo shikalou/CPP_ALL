@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/17 13:45:03 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/08/18 00:08:52 by ldinaut          ###   ########.fr       */
+/*   Created: 2022/09/19 14:16:35 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/09/19 19:12:38 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,38 @@
 
 Contact::Contact()
 {
-
 }
 
-void Contact::FillContact()
+void	Contact::SetContact()
 {
-	std::cout << "first name :" << std::endl;
-	getline(std::cin, m_firstname);
-	std::cout << "last name :" << std::endl;
-	getline(std::cin, m_lastname);
-	std::cout << "nickname :" << std::endl;
-	getline(std::cin, m_nickname);
-	std::cout << "phone number :" << std::endl;
-	getline(std::cin, m_phone);
-	std::cout << "secret :" << std::endl;
-	getline(std::cin, m_secret);
+	do
+	{
+		std::cout << "First name ?" << std::endl;
+		getline(std::cin, _firstname);
+	} while (_firstname.empty());
+	do
+	{
+		std::cout << "Last name ?" << std::endl;
+		getline(std::cin, _lastname);
+	} while (_lastname.empty());
+	do
+	{
+		std::cout << "Nickname ?" << std::endl;
+		getline(std::cin, _nickname);
+	} while (_nickname.empty());
+	do
+	{
+		std::cout << "Phone number ?" << std::endl;
+		getline(std::cin, _phone);
+	} while (_phone.empty());
+	do
+	{
+		std::cout << "Darkest secret ?" << std::endl;
+		getline(std::cin, _secret);
+	} while (_secret.empty());
 }
 
-std::string RemakeStr(std::string str)
+std::string	Contact::Resize(std::string str)
 {
 	unsigned	len;
 	int			i;
@@ -58,21 +72,21 @@ std::string RemakeStr(std::string str)
 
 void	Contact::Print(int i)
 {
-	std::string FirstN;
-	std::string LastN;
-	std::string NickN;
-	
-	FirstN = RemakeStr(m_firstname);
-	LastN = RemakeStr(m_lastname);
-	NickN = RemakeStr(m_nickname);
-	std::cout << "|" << i << "         |" << FirstN << "|" << LastN << "|" << NickN << "|" <<std::endl;
+	std::string firstname;
+	std::string lastname;
+	std::string nickname;
+
+	firstname = Resize(_firstname);
+	lastname = Resize(_lastname);
+	nickname = Resize(_nickname);
+	std::cout << "|" << i << "         |" << firstname << "|" << lastname << "|" << nickname << "|" << std::endl;
 }
 
 void	Contact::PrintDetail()
 {
-	std::cout << "first name : " << m_firstname << std::endl;
-	std::cout << "last name : " << m_lastname << std::endl;
-	std::cout << "nickname : " << m_nickname<< std::endl;
-	std::cout << "phone number : " << m_phone << std::endl;
-	std::cout << "secret : " << m_secret << std::endl;
+	std::cout << "First name : " << _firstname << std::endl;
+	std::cout << "Last name : " << _lastname << std::endl;
+	std::cout << "Nickname : " << _nickname << std::endl;
+	std::cout << "Phone number : " <<_phone << std::endl;
+	std::cout << "Darkest secret : " <<_secret << std::endl;
 }

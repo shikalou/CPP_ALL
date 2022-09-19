@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/16 23:06:56 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/08/17 22:13:04 by ldinaut          ###   ########.fr       */
+/*   Created: 2022/09/19 13:05:25 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/09/19 17:35:30 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,14 @@
 # include "Contact.hpp"
 
 class Phonebook
-{ 	
-	public: //methodes
-
+{
+	public :
 	Phonebook();
-	void	print();
-	void	createContact(int i);
-	void	printContact();
-	
-	private: //attributs
+	void	CreateContact(int i);
+	void	PrintContact();
 
-	Contact Listcontact[8];
+	private :
+	Contact _contactList[8];
 };
 
 #endif
