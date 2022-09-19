@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 13:05:25 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/19 17:35:30 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/09/19 19:47:39 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,19 @@
 
 # include <iostream>
 # include <string>
+# include <iomanip>
 # include "Contact.hpp"
 
 class Phonebook
 {
 	public :
 	Phonebook();
-	void	CreateContact(int i);
+	~Phonebook();
+	void	CreateContact();
 	void	PrintContact();
 
 	private :
+	int	_index;
 	Contact _contactList[8];
 };
 

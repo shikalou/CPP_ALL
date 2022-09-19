@@ -6,13 +6,17 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 14:16:35 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/19 19:12:38 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/09/19 19:48:53 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
 Contact::Contact()
+{
+}
+
+Contact::~Contact()
 {
 }
 
@@ -59,14 +63,7 @@ std::string	Contact::Resize(std::string str)
 		ret += ".";
 	}
 	else
-	{
 		ret += str;
-		while ((i + len) < 10)
-		{
-			ret += " ";
-			i++;
-		}
-	}
 	return (ret);
 }
 
@@ -79,11 +76,16 @@ void	Contact::Print(int i)
 	firstname = Resize(_firstname);
 	lastname = Resize(_lastname);
 	nickname = Resize(_nickname);
-	std::cout << "|" << i << "         |" << firstname << "|" << lastname << "|" << nickname << "|" << std::endl;
+	std::cout << "|" << std::setw(10) << i << "|" << std::setw(10) << firstname << "|" << std::setw(10) << lastname << "|" << std::setw(10) << nickname << "|" << std::endl;
 }
 
 void	Contact::PrintDetail()
 {
+	if (_firstname.empty())
+	{
+		std::cout << "Empty contact"<< std::endl;
+		return ;
+	}
 	std::cout << "First name : " << _firstname << std::endl;
 	std::cout << "Last name : " << _lastname << std::endl;
 	std::cout << "Nickname : " << _nickname << std::endl;

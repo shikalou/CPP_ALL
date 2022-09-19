@@ -6,20 +6,28 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 14:17:00 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/19 19:13:32 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/09/19 19:48:10 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.hpp"
 #include "Contact.hpp"
 
-Phonebook::Phonebook()
+Phonebook::Phonebook() :_index(0)
 {
 }
 
-void	Phonebook::CreateContact(int i)
+Phonebook::~Phonebook()
 {
-	_contactList[i % 8].SetContact();
+}
+
+void	Phonebook::CreateContact()
+{
+	_contactList[_index].SetContact();
+	if (_index + 1 == 8)
+		_index = 0;
+	else
+		_index++;
 }
 
 void	Phonebook::PrintContact()

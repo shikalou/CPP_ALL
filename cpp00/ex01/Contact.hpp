@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 13:07:36 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/19 18:06:59 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/09/19 19:47:01 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 
 # include <string>
 # include <iostream>
+# include <iomanip>
 
 class Contact
 {
 	public :
 	Contact();
+	~Contact();
 	void		SetContact();
 	void		ResetContact();
 	void		Print(int i);
