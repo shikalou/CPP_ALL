@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 14:16:35 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/19 19:48:53 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/09/20 00:43:08 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,9 @@ void	Contact::SetContact()
 std::string	Contact::Resize(std::string str)
 {
 	unsigned	len;
-	int			i;
 	std::string	ret;
 
 	len = str.length();
-	i = 0;
 	if (len > 10)
 	{
 		ret = str.substr(0, 9);

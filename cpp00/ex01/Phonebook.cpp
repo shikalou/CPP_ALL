@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 14:17:00 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/19 19:48:10 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/09/20 00:46:53 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,20 @@ void	Phonebook::CreateContact()
 		_index++;
 }
 
+int	Phonebook::CheckIndex(std::string str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (!isdigit(str[i]))
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
 void	Phonebook::PrintContact()
 {
 	std::string	index;
@@ -48,9 +62,13 @@ void	Phonebook::PrintContact()
 		std::cout << "Select an index >" << std::endl;
 		getline(std::cin, index);
 	}
-	i = std::stoi(index);
-	if (i < 8)
+	if (Phonebook::CheckIndex(index))
 	{
-		_contactList[i].PrintDetail();
+		const char *str = index.c_str();
+		i = atoi(str);
+		if (i < 8)
+			_contactList[i].PrintDetail();
+		else
+			std::cout << "Wrong index" << std::endl;
 	}
 }

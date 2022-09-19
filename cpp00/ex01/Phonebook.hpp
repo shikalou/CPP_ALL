@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 13:05:25 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/19 19:47:39 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/09/20 00:34:21 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <iostream>
 # include <string>
 # include <iomanip>
+# include <cctype>
+# include <cstdlib>
 # include "Contact.hpp"
 
 class Phonebook
@@ -25,6 +27,7 @@ class Phonebook
 	~Phonebook();
 	void	CreateContact();
 	void	PrintContact();
+	int		CheckIndex(std::string str);
 
 	private :
 	int	_index;
