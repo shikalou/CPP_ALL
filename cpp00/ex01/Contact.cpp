@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 14:16:35 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/20 00:43:08 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/09/20 11:38:36 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,26 +26,36 @@ void	Contact::SetContact()
 	{
 		std::cout << "First name ?" << std::endl;
 		getline(std::cin, _firstname);
+		if (std::cin.eof())
+			return ;
 	} while (_firstname.empty());
 	do
 	{
 		std::cout << "Last name ?" << std::endl;
 		getline(std::cin, _lastname);
+		if (std::cin.eof())
+			return ;
 	} while (_lastname.empty());
 	do
 	{
 		std::cout << "Nickname ?" << std::endl;
 		getline(std::cin, _nickname);
+		if (std::cin.eof())
+			return ;
 	} while (_nickname.empty());
 	do
 	{
 		std::cout << "Phone number ?" << std::endl;
 		getline(std::cin, _phone);
+		if (std::cin.eof())
+			return ;
 	} while (_phone.empty());
 	do
 	{
 		std::cout << "Darkest secret ?" << std::endl;
 		getline(std::cin, _secret);
+		if (std::cin.eof())
+			return ;
 	} while (_secret.empty());
 }
 
@@ -81,7 +91,7 @@ void	Contact::PrintDetail()
 {
 	if (_firstname.empty())
 	{
-		std::cout << "Empty contact"<< std::endl;
+		std::cout << "Empty contact !" << std::endl;
 		return ;
 	}
 	std::cout << "First name : " << _firstname << std::endl;

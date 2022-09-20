@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 14:17:00 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/20 00:46:53 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/09/20 11:42:30 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ void	Phonebook::PrintContact()
 	{
 		std::cout << "Select an index >" << std::endl;
 		getline(std::cin, index);
+		if (std::cin.eof())
+			return ;
 	}
 	if (Phonebook::CheckIndex(index))
 	{
@@ -71,4 +73,6 @@ void	Phonebook::PrintContact()
 		else
 			std::cout << "Wrong index" << std::endl;
 	}
+	else
+		std::cout << "Wrong index" << std::endl;
 }

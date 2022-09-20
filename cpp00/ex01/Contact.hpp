@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 13:07:36 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/19 19:47:01 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/09/20 11:43:24 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ class Contact
 	std::string	Resize(std::string str);
 
 	private :
-	std::string _firstname;
-	std::string _lastname;
-	std::string _nickname;
-	std::string _phone;
-	std::string _secret;
+	std::string	_firstname;
+	std::string	_lastname;
+	std::string	_nickname;
+	std::string	_phone;
+	std::string	_secret;
 
 };
 
