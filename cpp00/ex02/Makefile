@@ -5,34 +5,31 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/09/19 13:04:45 by ldinaut           #+#    #+#              #
-#    Updated: 2022/09/19 19:43:53 by ldinaut          ###   ########.fr        #
+#    Created: 2022/09/21 19:18:09 by ldinaut           #+#    #+#              #
+#    Updated: 2022/09/21 19:23:57 by ldinaut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	phonebook
+NAME	=	banksters
 
-SRCS		=	main.cpp \
-				Phonebook.cpp \
-				Contact.cpp
+SRCS	=	tests.cpp \
+			Account.cpp
 
-CXX			=	c++
+CXX		=	c++
 
 CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-OBJS		=	$(SRCS:%.cpp=%.o)
+OBJS	=	$(SRCS:%.cpp=%.o)
 
-all			:	$(NAME)
-
-$(NAME)		:	$(OBJS)
+all		:	$(OBJS)
 	$(CXX) $(CPPFLAGS) -o $(NAME) $(OBJS)
 
-clean		:
+clean	:
 	rm -rf $(OBJS)
 
-fclean		:	clean
+fclean	:	clean
 	rm -rf $(NAME)
 
-re			: fclean all
+re		: fclean all
 
-.PHONY:	all clean fclean re
+.PHONY: all clean fclean re

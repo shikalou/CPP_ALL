@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 13:07:36 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/20 11:43:24 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/09/21 14:55:42 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class Contact
 	Contact();
 	~Contact();
 	void		SetContact();
-	void		ResetContact();
 	void		Print(int i);
 	void		PrintDetail();
 	std::string	Resize(std::string str);

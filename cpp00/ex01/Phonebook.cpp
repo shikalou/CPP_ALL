@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 14:17:00 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/20 11:42:30 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/09/21 14:41:59 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,10 @@ int	Phonebook::CheckIndex(std::string str)
 	int	i;
 
 	i = 0;
-	while (str[i])
-	{
-		if (!isdigit(str[i]))
-			return (0);
-		i++;
-	}
+	if (str.length() > 1)
+		return (0);
+	if (!isdigit(str[i]))
+		return (0);
 	return (1);
 }
 
