@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/27 18:21:54 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/28 13:37:08 by ldinaut          ###   ########.fr       */
+/*   Created: 2022/09/28 14:34:06 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/09/29 15:16:40 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-// Creer une horde de N zombie tous appele name
-Zombie* Zombie::zombieHorde(int N, std::string name)
+int main()
 {
-	Zombie	*ret = new Zombie[N];
-	for (int i = 0; i < N; i++)
 	{
-		ret[i]._name = name;
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
 	}
-	return (ret);
+	{
+		Weapon club = Weapon("crude spiked club");
+		HumanB jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.attack();
+	}
+	return 0;
 }

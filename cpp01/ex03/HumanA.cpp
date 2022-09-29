@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/27 18:21:54 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/28 13:37:08 by ldinaut          ###   ########.fr       */
+/*   Created: 2022/09/28 15:32:08 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/09/29 15:22:01 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-// Creer une horde de N zombie tous appele name
-Zombie* Zombie::zombieHorde(int N, std::string name)
+HumanA::HumanA(std::string name, Weapon &_weapon) :_name(name), _weaponA(_weapon)
 {
-	Zombie	*ret = new Zombie[N];
-	for (int i = 0; i < N; i++)
-	{
-		ret[i]._name = name;
-	}
-	return (ret);
+	std::cout << "HumanA constructor w/ args" << std::endl;
 }
+
+HumanA::~HumanA()
+{
+	std::cout << "HumanA destructor" << std::endl;
+}
+
+void	HumanA::attack()
+{
+	std::cout << _name << " attacks with their " << _weaponA.getType() << std::endl;
+}
+

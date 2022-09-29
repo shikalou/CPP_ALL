@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/27 18:21:54 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/28 13:37:08 by ldinaut          ###   ########.fr       */
+/*   Created: 2022/09/28 14:34:48 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/09/28 15:42:51 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
+# include <iostream>
 
-// Creer une horde de N zombie tous appele name
-Zombie* Zombie::zombieHorde(int N, std::string name)
+class Weapon
 {
-	Zombie	*ret = new Zombie[N];
-	for (int i = 0; i < N; i++)
-	{
-		ret[i]._name = name;
-	}
-	return (ret);
-}
+	public:
+	Weapon();
+	Weapon(std::string weapon);
+	~Weapon();
+	std::string	&getType();
+	void	setType(std::string newType);
+	
+	private:
+	std::string	_type;
+};
+
+#endif

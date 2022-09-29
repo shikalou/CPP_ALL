@@ -1,24 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/27 18:21:54 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/28 13:37:08 by ldinaut          ###   ########.fr       */
+/*   Created: 2022/09/28 15:45:06 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/09/28 18:51:39 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
 
-// Creer une horde de N zombie tous appele name
-Zombie* Zombie::zombieHorde(int N, std::string name)
+Weapon::Weapon()
 {
-	Zombie	*ret = new Zombie[N];
-	for (int i = 0; i < N; i++)
-	{
-		ret[i]._name = name;
-	}
-	return (ret);
+	std::cout << "Weapon constructor" << std::endl;
+}
+
+Weapon::Weapon(std::string weapon) :_type(weapon)
+{
+	std::cout << "Weapon constructor w/ args" << std::endl;
+}
+
+Weapon::~Weapon()
+{
+	std::cout << "Weapon destructor" << std::endl;
+}
+
+std::string	&Weapon::getType()
+{
+	return(_type);
+}
+
+void	Weapon::setType(std::string newType)
+{
+	_type = newType;
 }

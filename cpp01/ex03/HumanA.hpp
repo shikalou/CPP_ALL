@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/27 18:21:54 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/09/28 13:37:08 by ldinaut          ###   ########.fr       */
+/*   Created: 2022/09/28 15:09:37 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/09/29 15:55:18 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 
-// Creer une horde de N zombie tous appele name
-Zombie* Zombie::zombieHorde(int N, std::string name)
+#include <iostream>
+#include "Weapon.hpp"
+
+class HumanA
 {
-	Zombie	*ret = new Zombie[N];
-	for (int i = 0; i < N; i++)
-	{
-		ret[i]._name = name;
-	}
-	return (ret);
-}
+	public :
+	HumanA(std::string name, Weapon &_type);
+	~HumanA();
+	void	attack(void);
+
+	private :
+	std::string	_name;
+	Weapon& _weaponA;
+
+};
+
+#endif
