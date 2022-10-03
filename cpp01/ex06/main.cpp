@@ -5,23 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 16:46:54 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/03 14:24:45 by ldinaut          ###   ########.fr       */
+/*   Created: 2022/10/03 18:10:13 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/10/03 18:26:55 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "notsed.hpp"
+#include "Harl.hpp"
 
-int main(int ac, char **av)
+int	main(int ac, char** av)
 {
-	if (ac == 4)
+	Harl Karen;
+	if (ac == 2)
 	{
-		std::string	infile(av[1]);
-		std::string	s1(av[2]);
-		std::string	s2(av[3]);
-		notsed(infile, s1, s2);
+		std::string level(av[1]);
+		Karen.complain(level);
 		return (0);
 	}
-	std::cerr << "wrong argument count" << std::endl;
+	std::cout << "Need only one parameter, try DEBUG, INFO, WARNING or ERROR" << std::endl;
 	return (1);
 }
