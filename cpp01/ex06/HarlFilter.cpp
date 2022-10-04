@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.cpp                                           :+:      :+:    :+:   */
+/*   HarlFilter.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:59:45 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/03 19:19:41 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/04 10:47:45 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include "HarlFilter.hpp"
 
 Harl::Harl()
 {
@@ -44,7 +44,7 @@ void	Harl::complain(std::string level)
 			return ;
 		}
 	}
-	std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+	std::cout << " [ Probably complaining about insignificant problems ] " << std::endl;
 }
 
 void	Harl::debug()

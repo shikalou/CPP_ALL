@@ -6,13 +6,13 @@
 #    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 18:04:23 by ldinaut           #+#    #+#              #
-#    Updated: 2022/10/03 18:07:30 by ldinaut          ###   ########.fr        #
+#    Updated: 2022/10/04 10:46:23 by ldinaut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	harlFilter
 
-SRCS	=	main.cpp Harl.cpp
+SRCS	=	main.cpp HarlFilter.cpp
 
 CXX	=	c++
 
