@@ -6,13 +6,13 @@
 #    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 15:10:09 by ldinaut           #+#    #+#              #
-#    Updated: 2022/10/10 15:28:42 by ldinaut          ###   ########.fr        #
+#    Updated: 2022/10/10 17:00:53 by ldinaut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	toto
 
-SRCS_FILES	=	main.cpp
+SRCS_FILES	=	main.cpp Fixed.cpp
 
 SRCS	=	$(addprefix srcs/, $(SRCS_FILES))
 

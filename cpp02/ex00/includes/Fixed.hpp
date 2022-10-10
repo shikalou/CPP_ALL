@@ -1,37 +1,42 @@
-// Create a class in Orthodox Canonical Form that represents a fixed-point number:
-// • Private members:
-// ◦ An integer to store the fixed-point number value.
-// ◦ A static constant integer to store the number of fractional bits. Its value
-// will always be the integer literal 8.
-// • Public members:
-// ◦ A default constructor that initializes the fixed-point number value to 0.
-// ◦ A copy constructor.
-// ◦ A copy assignment operator overload.
-// ◦ A destructor.
-// ◦ A member function int getRawBits( void ) const;
-// that returns the raw value of the fixed-point value.
-// ◦ A member function void setRawBits( int const raw );
-// that sets the raw value of the fixed-point number.
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/10 16:38:53 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/10/10 17:19:22 by ldinaut          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef FIXED_HPP
 #define FIXED_HPP
 
+#include <iostream>
+
 class Fixed
 {
 	public :
-	Fixed(void); // default constructor
-	Fixed(Fixed const & src); // copy constructor?? idkkkkkk
-	~Fixed(void); // default destructor
+	// constructors
+	Fixed(void);
+	Fixed(Fixed const & src);
 
-	Fixed	&operator=(Fixed const & wth); // i think copy assignement operator overload ??
-	int		getsRawBits(int const raw); // returns the raw value of the fixed-point value.
-	void	setRawBits(int const raw); // sets the raw value of the fixed-point number.
+	// default destructor
+	~Fixed(void);
+
+	// copy assignement operator overload
+	Fixed	&operator=(Fixed const & wtf);
+
+	// returns the raw value of the fixed-point value.
+	int		getsRawBits(int const raw);
+
+	// sets the raw value of the fixed-point number.
+	void	setRawBits(int const raw);
 
 	private :
-	int	_stock;
+	int					_stock;
 	static const int	_bits;
 };
-
-
 
 #endif
