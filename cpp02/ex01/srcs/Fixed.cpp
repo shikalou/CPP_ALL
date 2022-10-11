@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:15:07 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/11 15:21:59 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/11 18:00:45 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,16 @@ Fixed::Fixed(Fixed const &src)
 {
 	std::cout << "Copy constructor called" << std::endl;
 	*this = src;
+}
+
+Fixed::Fixed(const int i)
+{
+
+}
+
+Fixed::Fixed(const float f)
+{
+
 }
 
 Fixed::~Fixed()
@@ -45,5 +55,16 @@ int	Fixed::getRawBits(void) const
 
 void	Fixed::setRawBits(int const raw)
 {
+	std::cout << "setRawBits member function called" << std::endl;
 	_stock = raw;
+}
+
+float	Fixed::toFloat(void) const
+{
+	return ((float)_stock);
+}
+
+int	Fixed::toInt(void) const
+{
+	return ((int)_stock);
 }

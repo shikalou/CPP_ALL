@@ -6,11 +6,11 @@
 #    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 15:10:09 by ldinaut           #+#    #+#              #
-#    Updated: 2022/10/11 15:08:49 by ldinaut          ###   ########.fr        #
+#    Updated: 2022/10/11 15:26:09 by ldinaut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	toto
+NAME	=	toto2
 
 SRCS_FILES	=	main.cpp Fixed.cpp
 
