@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:38:53 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/11 22:15:04 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/12 04:13:08 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,25 +19,37 @@
 class Fixed
 {
 	public :
-	// constructors
 	Fixed(void);
 	Fixed(Fixed const &src);// copy constructor
 	Fixed(const int i);
 	Fixed(const float f);
-
-	// default destructor
 	~Fixed(void);
-
-	// copy assignement operator overload
-	Fixed	&operator=(Fixed const &wtf);
-	// returns the raw value of the fixed-point value.
+	// operator overload
+	Fixed	&operator=(Fixed const &egal);
+	bool	operator>(Fixed const &upper);
+	bool	operator<(Fixed const &lower);
+	bool	operator>=(Fixed const &eupper);
+	bool	operator<=(Fixed const &elower);
+	bool	operator==(Fixed const &egal);
+	bool	operator!=(Fixed const &diff);
+	Fixed	&operator+(Fixed const &add);
+	Fixed	&operator-(Fixed const &sup);
+	Fixed	&operator*(Fixed const &time);
+	Fixed	&operator/(Fixed const &div);
+	Fixed	&operator++(void);
+	Fixed	operator++(int);
+	Fixed	&operator--(void);
+	Fixed	operator--(int);
+	
 	int		getRawBits(void) const;
-	// sets the raw value of the fixed-point number.
 	void	setRawBits(int const raw);
-	// converts the fixed-point value to a floating-point value.
 	float	toFloat(void) const;
-	// converts the fixed-point value to an integer value.
 	int		toInt(void) const;
+
+	static int	min(Fixed &a, Fixed &b);
+	static const int	&min(Fixed const &a, Fixed const &b);
+	static int	max(Fixed &a, Fixed &b);
+	static const int	&max(Fixed const &a, Fixed const &b);
 
 	private :
 	int					_stock;

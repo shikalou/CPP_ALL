@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:15:07 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/11 18:00:45 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/11 23:50:25 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,14 @@ Fixed::Fixed(Fixed const &src)
 
 Fixed::Fixed(const int i)
 {
-
+	std::cout << "Int constructor called" << std::endl;
+	_stock = i << _bits;
 }
 
 Fixed::Fixed(const float f)
 {
-
+	std::cout << "Float constructor called" << std::endl;
+	_stock = roundf(f * (1 << _bits));
 }
 
 Fixed::~Fixed()
@@ -43,7 +45,7 @@ Fixed::~Fixed()
 Fixed	&Fixed::operator=(Fixed const &wtf)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	_stock = wtf.getRawBits();
+	_stock = wtf._stock;
 	return (*this);
 }
 
@@ -61,10 +63,16 @@ void	Fixed::setRawBits(int const raw)
 
 float	Fixed::toFloat(void) const
 {
-	return ((float)_stock);
+	return ((float)_stock / ((float)(1 << _bits)));
 }
 
 int	Fixed::toInt(void) const
 {
-	return ((int)_stock);
+	return (_stock >> _bits);
+}
+
+std::ostream &operator<<(std::ostream &outfile, Fixed const &wtf)
+{
+	outfile << wtf.toFloat();
+	return (outfile);
 }
