@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 23:51:32 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/12 00:35:35 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/13 14:16:14 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,8 @@ int main( void )
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 	std::cout << Fixed::max( a, b ) << std::endl;
+	Fixed c(Fixed(8) / Fixed(0));
+	std::cout << c << std::endl;
+	std::cout << a + c << std::endl;
 	return 0;
 }

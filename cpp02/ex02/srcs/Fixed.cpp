@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:15:07 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/12 04:29:03 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/13 14:14:00 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,40 +129,39 @@ bool	Fixed::operator!=(Fixed const &diff)
 		return (true);
 }
 
-Fixed	&Fixed::operator+(Fixed const &add)
+Fixed	Fixed::operator+(Fixed const &add)
 {
-	this->setRawBits(_stock + add.getRawBits());
+	return (Fixed(this->toFloat() + add.toFloat()));
+}
+
+Fixed	Fixed::operator-(Fixed const &sup)
+{
+	return (Fixed(this->toFloat() - sup.toFloat()));
+}
+
+Fixed	Fixed::operator*(Fixed const &time) 
+{
+	return (Fixed(time.toFloat() * this->toFloat()));
+}
+
+Fixed	Fixed::operator/(Fixed const &div)
+{
+	if (div._stock)
+		return (Fixed(this->toFloat() / div.toFloat()));
+	std::cerr << "cannot divide by 0" << std::endl;
 	return (*this);
 }
 
-Fixed	&Fixed::operator-(Fixed const &sup)
-{
-	this->setRawBits(_stock - sup.getRawBits());
-	return (*this);
-}
-
-Fixed	&Fixed::operator*(Fixed const &time)
-{
-	this->setRawBits(_stock * time.getRawBits());
-	return (*this);
-}
-
-Fixed	&Fixed::operator/(Fixed const &div)
-{
-	this->setRawBits(_stock / div.getRawBits());
-	return (*this);
-}
-
-Fixed	&Fixed::operator++(void)
+Fixed	&Fixed::operator++(void) // ++i
 {
 	this->_stock++;
 	return (*this);
 }
 
-Fixed	Fixed::operator++(int)
+Fixed	Fixed::operator++(int) // i++
 {
-	Fixed tmp;
-	tmp._stock++;
+	Fixed tmp = *this;
+	this->_stock++;
 	return (tmp);
 }
 
@@ -174,39 +173,40 @@ Fixed	&Fixed::operator--(void)
 
 Fixed	Fixed::operator--(int)
 {
-	Fixed tmp;
-	tmp._stock--;
+	Fixed tmp = *this;
+	this->_stock--;
 	return (tmp);
 }
 
-int	Fixed::min(Fixed &a, Fixed &b)
+Fixed	&Fixed::min(Fixed &a, Fixed &b)
 {
 	if (a._stock < b._stock)
-		return (a._stock);
+		return (a);
 	else
-		return (b._stock);
+		return (b);
 }
 
-const int	&Fixed::min(Fixed const &a, Fixed const &b)
+const Fixed	&Fixed::min(Fixed const &a, Fixed const &b)
 {
 	if (a._stock < b._stock)
-		return (a._stock);
+		return (a);
 	else
-		return (b._stock);
+		return (b);
 }
 
-int	Fixed::max(Fixed &a, Fixed &b)
+Fixed	&Fixed::max(Fixed &a, Fixed &b)
 {
 	if (a._stock > b._stock)
-		return (a._stock);
+		return (a);
 	else
-		return (b._stock);
+		return (b);
 }
 
-const int	&Fixed::max(Fixed const &a, Fixed const &b)
+const Fixed	&Fixed::max(Fixed const &a, Fixed const &b)
 {
+	
 	if (a._stock > b._stock)
-		return (a._stock);
+		return (a);
 	else
-		return (b._stock);
+		return (b);
 }

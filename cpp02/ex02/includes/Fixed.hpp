@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:38:53 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/12 04:13:08 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/13 14:05:59 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ class Fixed
 	bool	operator<=(Fixed const &elower);
 	bool	operator==(Fixed const &egal);
 	bool	operator!=(Fixed const &diff);
-	Fixed	&operator+(Fixed const &add);
-	Fixed	&operator-(Fixed const &sup);
-	Fixed	&operator*(Fixed const &time);
-	Fixed	&operator/(Fixed const &div);
+	Fixed	operator+(Fixed const &add);
+	Fixed	operator-(Fixed const &sup);
+	Fixed	operator*(Fixed const &time);
+	Fixed	operator/(Fixed const &div);
 	Fixed	&operator++(void);
 	Fixed	operator++(int);
 	Fixed	&operator--(void);
@@ -46,10 +46,10 @@ class Fixed
 	float	toFloat(void) const;
 	int		toInt(void) const;
 
-	static int	min(Fixed &a, Fixed &b);
-	static const int	&min(Fixed const &a, Fixed const &b);
-	static int	max(Fixed &a, Fixed &b);
-	static const int	&max(Fixed const &a, Fixed const &b);
+	static Fixed	&min(Fixed &a, Fixed &b);
+	static const Fixed	&min(Fixed const &a, Fixed const &b);
+	static Fixed	&max(Fixed &a, Fixed &b);
+	static const Fixed	&max(Fixed const &a, Fixed const &b);
 
 	private :
 	int					_stock;
