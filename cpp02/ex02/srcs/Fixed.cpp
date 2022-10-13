@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 16:15:07 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/13 14:14:00 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/13 15:53:12 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -152,13 +152,13 @@ Fixed	Fixed::operator/(Fixed const &div)
 	return (*this);
 }
 
-Fixed	&Fixed::operator++(void) // ++i
+Fixed	&Fixed::operator++(void)
 {
 	this->_stock++;
 	return (*this);
 }
 
-Fixed	Fixed::operator++(int) // i++
+Fixed	Fixed::operator++(int)
 {
 	Fixed tmp = *this;
 	this->_stock++;
