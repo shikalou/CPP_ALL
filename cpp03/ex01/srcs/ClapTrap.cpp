@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:51:24 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/14 18:19:08 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/14 18:37:55 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 ClapTrap::ClapTrap()
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "ClapTrap default constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) :_name(name), _hp(10), _mana(10), _damage(0)
 {
-	std::cout << "String constructor called" << std::endl;
+	std::cout << "ClapTrap string constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name, int hp, int mana, int damage) :_name(name), _hp(hp), _mana(mana), _damage(damage)
 {
-	std::cout << "Full constructor called" << std::endl;
+	std::cout << "ClapTrap full constructor called" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &copy)
@@ -35,7 +35,7 @@ ClapTrap::ClapTrap(ClapTrap const &copy)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "ClapTrap destructor called" << std::endl;
 }
 
 void	ClapTrap::attack(const std::string &target)
