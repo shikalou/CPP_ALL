@@ -6,7 +6,7 @@
 #    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/22 15:10:09 by ldinaut           #+#    #+#              #
-#    Updated: 2022/10/11 22:25:01 by ldinaut          ###   ########.fr        #
+#    Updated: 2022/10/17 18:06:55 by ldinaut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRCS_FILES	=	main.cpp Fixed.cpp
 
 SRCS	=	$(addprefix srcs/, $(SRCS_FILES))
 
-CXX	=	g++
+CXX	=	c++
 
 CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I./includes
 
