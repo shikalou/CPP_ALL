@@ -1,5 +1,7 @@
 # Prerequisites
 objs/
+school/
+.vscode
 *.d
 *.o
 *.lib
