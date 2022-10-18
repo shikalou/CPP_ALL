@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/13 16:48:35 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/18 15:23:07 by ldinaut          ###   ########.fr       */
+/*   Created: 2022/10/18 17:54:30 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/10/18 18:40:11 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-int	main(void)
+FragTrap::FragTrap() : ClapTrap()
 {
-	ClapTrap Perso1("riri");
-	ScavTrap Perso2("loulou");
-
-	Perso1.fullAttack(Perso2);
-	Perso2.fullAttack(Perso1);
-	Perso2.fullAttack(Perso1);
-	Perso1.fullAttack(Perso2);
-	return (0);
+	std::cout << "FragTrap default constructor called" << std::endl;
 }
+
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
+{
+	std::cout << "FragTrap string constructor called" << std::endl;
+	_name = name;
+	_hp = 100;
+	_mana = 100;
+	_damage = 30;
+}
+
+FragTrap::~FragTrap()
+{
+	std::cout << "FragTrap destructor called" << std::endl;
+}
+

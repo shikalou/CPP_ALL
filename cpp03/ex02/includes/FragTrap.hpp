@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/13 16:48:35 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/18 15:23:07 by ldinaut          ###   ########.fr       */
+/*   Created: 2022/10/18 17:50:10 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/10/18 17:54:23 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
+
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
 
-int	main(void)
+class FragTrap : public ClapTrap
 {
-	ClapTrap Perso1("riri");
-	ScavTrap Perso2("loulou");
+	public:
+	FragTrap();
+	FragTrap(std::string name);
+	FragTrap(std::string name, int hp, int mana, int damage);
+	~FragTrap();
 
-	Perso1.fullAttack(Perso2);
-	Perso2.fullAttack(Perso1);
-	Perso2.fullAttack(Perso1);
-	Perso1.fullAttack(Perso2);
-	return (0);
-}
+	private:
+	void	highFivesGuys(void);
+
+};
+
+#endif
