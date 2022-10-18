@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 17:50:10 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/18 22:28:10 by ldinaut          ###   ########.fr       */
+/*   Created: 2022/10/18 23:12:44 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/10/18 23:30:10 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+#define DIAMONDTRAP_HPP
 
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class DiamondTrap
 {
 	public:
-	FragTrap();
-	FragTrap(std::string name);
-	FragTrap(std::string name, int hp, int mana, int damage);
-	~FragTrap();
-	void	highFivesGuys(void);
-
+	DiamondTrap();
+	DiamondTrap(std::string name);
+	~DiamondTrap();
+	
 	private:
-};
+	std::string _name;
+}
 
 #endif

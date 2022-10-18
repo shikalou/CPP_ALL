@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 17:50:10 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/18 22:28:10 by ldinaut          ###   ########.fr       */
+/*   Created: 2022/10/18 23:29:25 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/10/18 23:37:07 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#include "DiamondTrap.hpp"
 
-#include "ClapTrap.hpp"
+// https://loic-joly.developpez.com/articles/heritage-multiple/#L4-B
 
-class FragTrap : public ClapTrap
+DiamondTrap::DiamondTrap() :
 {
-	public:
-	FragTrap();
-	FragTrap(std::string name);
-	FragTrap(std::string name, int hp, int mana, int damage);
-	~FragTrap();
-	void	highFivesGuys(void);
+	std::cout << "DiamondTrap default constructor called" << std::endl;
+}
 
-	private:
-};
+DiamondTrap::DiamondTrap(std::string name)
+{
+	_name = name;
 
-#endif
+}

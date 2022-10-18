@@ -6,13 +6,13 @@
 #    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/13 16:44:35 by ldinaut           #+#    #+#              #
-#    Updated: 2022/10/18 23:00:55 by ldinaut          ###   ########.fr        #
+#    Updated: 2022/10/18 23:30:40 by ldinaut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	fragTrap
+NAME	=	diamondTrap
 
-SRCS_FILES	=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRCS_FILES	=	main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 SRCS	=	$(addprefix srcs/, $(SRCS_FILES))
 
