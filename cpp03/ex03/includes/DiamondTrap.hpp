@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 23:12:44 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/19 16:20:27 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/19 17:50:12 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class DiamondTrap : public FragTrap, public ScavTrap
 	DiamondTrap(std::string name);
 	~DiamondTrap();
 	void	whoAmI();
-	using	ScavTrap::attack(std::string &target);
+	using	ScavTrap::attack;
 
 	private:
 	std::string _name;
