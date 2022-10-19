@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 23:29:25 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/18 23:37:07 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/19 16:22:55 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,20 @@
 
 // https://loic-joly.developpez.com/articles/heritage-multiple/#L4-B
 
-DiamondTrap::DiamondTrap() :
+DiamondTrap::DiamondTrap()
 {
 	std::cout << "DiamondTrap default constructor called" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(std::string name)
 {
-	_name = name;
+	_name = name + ("_clap_name");
+	_hp = 100;
+	_mana = 50;
+	_damage = 30;
+}
 
+void	DiamondTrap::whoAmI()
+{
+	
 }

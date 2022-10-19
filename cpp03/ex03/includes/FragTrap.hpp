@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:50:10 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/18 22:28:10 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/19 16:02:59 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 	public:
 	FragTrap();
@@ -23,6 +23,7 @@ class FragTrap : public ClapTrap
 	FragTrap(std::string name, int hp, int mana, int damage);
 	~FragTrap();
 	void	highFivesGuys(void);
+	int	getHP();
 
 	private:
 };
