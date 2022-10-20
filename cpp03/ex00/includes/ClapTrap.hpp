@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:51:59 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/19 18:57:46 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/20 12:28:29 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,6 @@ class ClapTrap
 	void	attack(const std::string &target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
-	int	getHP(void);
-	int	getMana(void);
-	int	getDamage(void);
-	std::string getName(void);
 	ClapTrap	&operator=(ClapTrap const &egal);
 
 	private:

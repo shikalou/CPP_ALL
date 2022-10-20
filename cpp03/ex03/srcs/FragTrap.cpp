@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:54:30 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/18 22:05:26 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/20 13:12:47 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,24 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	_damage = 30;
 }
 
+FragTrap::FragTrap(FragTrap const &copy)
+{
+	std::cout << "Copy constructor called" << std::endl;
+	*this = copy;
+}
+
 FragTrap::~FragTrap()
 {
 	std::cout << "FragTrap destructor called" << std::endl;
+}
+
+FragTrap	&FragTrap::operator=(FragTrap const &egal)
+{
+	_name = egal._name;
+	_hp = egal._hp;
+	_damage = egal._damage;
+	_mana = egal._mana;
+	return (*this);
 }
 
 void	FragTrap::highFivesGuys(void)

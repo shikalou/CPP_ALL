@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 18:34:59 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/18 16:31:59 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/20 13:13:14 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,24 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	_damage = 20;
 }
 
+ScavTrap::ScavTrap(ScavTrap const &copy)
+{
+	std::cout << "Copy constructor called" << std::endl;
+	*this = copy;
+}
+
 ScavTrap::~ScavTrap()
 {
 	std::cout << "ScavTrap destructor called" << std::endl;
+}
+
+ScavTrap	&ScavTrap::operator=(ScavTrap const &egal)
+{
+	_name = egal._name;
+	_hp = egal._hp;
+	_damage = egal._damage;
+	_mana = egal._mana;
+	return (*this);
 }
 
 void	ScavTrap::fullAttack(ClapTrap &target)

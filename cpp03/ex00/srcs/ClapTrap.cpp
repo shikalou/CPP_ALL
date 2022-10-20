@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:51:24 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/19 19:00:17 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/20 12:28:23 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,30 +38,13 @@ ClapTrap::~ClapTrap()
 	std::cout << "Destructor called" << std::endl;
 }
 
-int	ClapTrap::getHP(void)
-{
-	return (_hp);
-}
-
-int	ClapTrap::getMana(void)
-{
-	return (_mana);
-}
-
-int	ClapTrap::getDamage(void)
-{
-	return (_damage);
-}
-
-std::string ClapTrap::getName(void)
-{
-	return (_name);
-}
-
 ClapTrap	&ClapTrap::operator=(ClapTrap const &egal)
 {
-	_name = egal.getName();
-
+	_name = egal._name;
+	_hp = egal._hp;
+	_damage = egal._damage;
+	_mana = egal._mana;
+	return (*this);
 }
 
 void	ClapTrap::attack(const std::string &target)

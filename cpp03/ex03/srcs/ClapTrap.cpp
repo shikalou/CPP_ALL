@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:51:24 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/18 16:28:02 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/20 12:38:32 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,15 @@ ClapTrap::ClapTrap(ClapTrap const &copy)
 ClapTrap::~ClapTrap()
 {
 	std::cout << "ClapTrap destructor called" << std::endl;
+}
+
+ClapTrap	&ClapTrap::operator=(ClapTrap const &egal)
+{
+	_name = egal._name;
+	_hp = egal._hp;
+	_damage = egal._damage;
+	_mana = egal._mana;
+	return (*this);
 }
 
 void	ClapTrap::fullAttack(ClapTrap &target)

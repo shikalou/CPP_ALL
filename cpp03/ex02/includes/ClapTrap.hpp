@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:51:59 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/18 16:28:08 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/20 12:37:45 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class ClapTrap
 	ClapTrap(std::string name, int hp, int mana, int damage);
 	ClapTrap(ClapTrap const &copy);
 	~ClapTrap();
+	ClapTrap	&operator=(ClapTrap const &egal);
 	void	fullAttack(ClapTrap &target);
 	void	attack(const std::string &target);
 	void	takeDamage(unsigned int amount);

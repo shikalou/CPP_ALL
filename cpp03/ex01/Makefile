@@ -6,7 +6,7 @@
 #    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/13 16:44:35 by ldinaut           #+#    #+#              #
-#    Updated: 2022/10/18 16:17:23 by ldinaut          ###   ########.fr        #
+#    Updated: 2022/10/20 13:21:15 by ldinaut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ fclean	:	clean
 
 re	:	fclean all
 
-objs/%.o	: srcs/%.cpp includes/%.hpp 
+objs/%.o	: srcs/%.cpp includes/
 	mkdir -p objs
 	$(CXX) $(CPPFLAGS) -MMD -o $@ -c $<
 
