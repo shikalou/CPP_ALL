@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 18:34:59 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/20 17:18:49 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/21 14:41:36 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap destructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(ScavTrap const &copy)
+ScavTrap::ScavTrap(ScavTrap const &copy) : ClapTrap(copy)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Scav Copy constructor called" << std::endl;
 	*this = copy;
 }
 

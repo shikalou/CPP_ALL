@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:48:35 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/20 13:25:05 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/21 15:51:44 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,9 @@ int	main(void)
 	Perso2.fullAttack(Perso1);
 	Perso2.beRepaired(10);
 	Perso1.beRepaired(30);
-	
+
 	FragTrap Perso4(Perso3);
+	Perso4.fullAttack(Perso3);
 
 	return (0);
 }

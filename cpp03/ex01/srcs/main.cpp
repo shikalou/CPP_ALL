@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:48:35 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/20 13:56:55 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/21 15:04:39 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,8 @@ int	main(void)
 	Perso3.fullAttack(Perso1);
 
 	Perso3.guardGate();
+	Perso1.fullAttack(Perso3);
+	Perso2.guardGate();
+	
 	return (0);
 }

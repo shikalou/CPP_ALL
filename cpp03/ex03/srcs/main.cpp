@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:48:35 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/20 13:55:39 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/21 16:07:58 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,32 +17,17 @@
 
 int	main(void)
 {
-	ClapTrap Perso1("riri");
-	ScavTrap Perso2("loulou");
+	DiamondTrap Perso1("toto");
+	DiamondTrap Perso2("titi");
 
 	Perso1.fullAttack(Perso2);
-	Perso2.fullAttack(Perso1);
-	Perso2.fullAttack(Perso1);
+	Perso2.whoAmI();
+	Perso1.highFivesGuys();
+	Perso2.fullAttack(Perso2);
 	Perso2.guardGate();
-	Perso1.fullAttack(Perso2);
 
-	FragTrap Perso3("fifi");
-
-	Perso3.fullAttack(Perso2);
-	Perso3.highFivesGuys();
-	Perso2.fullAttack(Perso1);
-	Perso2.beRepaired(10);
-	Perso1.beRepaired(30);
-	
-	DiamondTrap Perso4("toto");
-
-	Perso4.fullAttack(Perso3);
-	Perso4.whoAmI();
-	Perso4.highFivesGuys();
-	Perso4.guardGate();
-
-	DiamondTrap Perso5(Perso4);
-	Perso5.fullAttack(Perso3);
-
+	DiamondTrap Perso3(Perso1);
+	Perso3.fullAttack(Perso1);
+	Perso3.beRepaired(5);
 	return (0);
 }
