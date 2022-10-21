@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 18:33:39 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/20 13:20:08 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/20 16:21:59 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ class ScavTrap : public ClapTrap
 	void	attack(const std::string &target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
+	void	guardGate();
 
 	private:
-	void	guardGate();
 };
 
 

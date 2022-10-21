@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 18:34:59 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/20 13:13:14 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/20 17:28:50 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 ScavTrap::ScavTrap() : ClapTrap()
 {
 	std::cout << "ScavTrap default constructor called" << std::endl;
+	_hp = 100;
+	_mana = 50;
+	_damage = 20;
 }
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
@@ -71,7 +74,10 @@ void	ScavTrap::takeDamage(unsigned int amount)
 		std::cout << "ScavTrap " << _name << " is already dead miskine ... he can't take anymore damage!" << std::endl;
 		return ;
 	}
-	this->_hp -= amount;
+	if (_hp <= amount)
+		this->_hp = 0;
+	else
+		this->_hp -= amount;
 	std::cout << "ScavTrap " << _name << " lost " << amount << " health point, " << _hp << " still left\n" << std::endl;
 }
 

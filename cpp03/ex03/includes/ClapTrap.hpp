@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:51:59 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/20 12:39:05 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/20 16:18:56 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ class ClapTrap
 
 	protected:
 	std::string _name;
-	int	_hp;
-	int	_mana;
-	int	_damage;
+	unsigned int	_hp;
+	unsigned int	_mana;
+	unsigned int	_damage;
 
 	private:
 };

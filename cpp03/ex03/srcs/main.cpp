@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:48:35 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/20 13:29:12 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/20 13:55:39 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int	main(void)
 
 	Perso4.fullAttack(Perso3);
 	Perso4.whoAmI();
+	Perso4.highFivesGuys();
+	Perso4.guardGate();
 
 	DiamondTrap Perso5(Perso4);
 	Perso5.fullAttack(Perso3);

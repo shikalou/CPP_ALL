@@ -6,18 +6,18 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 16:51:24 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/20 12:38:32 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/20 17:18:51 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap() : _name("bot"), _hp(10), _mana(10), _damage(0)
 {
 	std::cout << "ClapTrap default constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) :_name(name), _hp(50), _mana(50), _damage(10)
+ClapTrap::ClapTrap(std::string name) :_name(name), _hp(10), _mana(10), _damage(0)
 {
 	std::cout << "ClapTrap string constructor called" << std::endl;
 }
@@ -72,7 +72,10 @@ void	ClapTrap::takeDamage(unsigned int amount)
 		std::cout << "ClapTrap " << _name << " is already dead miskine ... he can't take anymore damage!" << std::endl;
 		return ;
 	}
-	this->_hp -= amount;
+	if (_hp <= amount)
+		this->_hp = 0;
+	else
+		this->_hp -= amount;
 	std::cout << "ClapTrap " << _name << " lost " << amount << " health point, " << _hp << " still left\n" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 17:54:30 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/20 13:05:56 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/20 17:50:57 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 FragTrap::FragTrap() : ClapTrap()
 {
 	std::cout << "FragTrap default constructor called" << std::endl;
+	_hp = 100;
+	_mana = 100;
+	_damage = 30;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)

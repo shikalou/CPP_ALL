@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 23:29:25 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/20 13:12:03 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/20 17:51:17 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 DiamondTrap::DiamondTrap()
 {
 	std::cout << "DiamondTrap default constructor called" << std::endl;
+	_hp = 100;
+	_mana = 50;
+	_damage = 30;
 }
 
 DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + ("_clap_name"))
@@ -45,6 +48,7 @@ DiamondTrap	&DiamondTrap::operator=(DiamondTrap const &egal)
 	_hp = egal._hp;
 	_damage = egal._damage;
 	_mana = egal._mana;
+	ClapTrap::_name = egal.ClapTrap::_name;
 	return (*this);
 }
 
