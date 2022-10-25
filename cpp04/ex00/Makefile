@@ -6,15 +6,15 @@
 #    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/19 18:24:03 by ldinaut           #+#    #+#              #
-#    Updated: 2022/10/19 18:28:36 by ldinaut          ###   ########.fr        #
+#    Updated: 2022/10/25 12:35:46 by ldinaut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	animals
 
-SRCS_FILES	=	main.cpp
+SRCS_FILES	=	main.cpp Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp
 
-INC_FILES	=	Animal.hpp
+INC_FILES	=	Animal.hpp Cat.hpp Dog.hpp WrongCat.hpp WrongAnimal.hpp
 
 SRCS	=	$(addprefix srcs/, $(SRCS_FILES))
 

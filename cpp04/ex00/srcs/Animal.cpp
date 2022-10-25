@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 18:37:33 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/21 19:03:34 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/25 11:44:51 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,18 @@
 
 Animal::Animal()
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "Animal default constructor called" << std::endl;
+	_type = "Animal";
+}
+
+Animal::Animal(std::string newType = "Animal") :_type(newType)
+{
+	std::cout << "Animal default constructor called" << std::endl;
 }
 
 Animal::Animal(Animal const &copy)
 {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Animal copy constructor called" << std::endl;
 	*this = copy;
 }
 
@@ -32,4 +38,14 @@ Animal	&Animal::operator=(Animal const &egal)
 Animal::~Animal()
 {
 	std::cout << "Animal destructor called" << std::endl;
+}
+
+void	Animal::makeSound() const
+{
+	std::cout << "Random animal sounds" << std::endl;
+}
+
+std::string	Animal::getType() const
+{
+	return (this->_type);
 }
