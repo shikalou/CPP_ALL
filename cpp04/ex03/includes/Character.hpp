@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 16:32:10 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/26 19:46:40 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/27 15:11:02 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,13 @@
 
 #include <iostream>
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
-class Character
+class Character : public ICharacter
 {
 	public:
 	Character();
+	Character(std::string name);
 	~Character();
 	Character(Character const &copy);
 	Character &operator=(Character const &egal);

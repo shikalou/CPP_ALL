@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 17:16:42 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/26 18:26:12 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/27 16:31:25 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,18 @@ Ice::Ice() : AMateria("ice")
 Ice::~Ice()
 {
 	std::cout << "Ice destructor called" << std::endl;
+}
+
+Ice::Ice(Ice const &copy) : AMateria(copy)
+{
+	std::cout << "Ice copy constructor called" << std::endl;
+	*this = copy;
+}
+
+Ice	&Ice::operator=(Ice const &egal)
+{
+	(void)egal;
+	return (*this);
 }
 
 AMateria *Ice::clone() const

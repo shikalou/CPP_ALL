@@ -6,15 +6,17 @@
 #    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/19 18:24:03 by ldinaut           #+#    #+#              #
-#    Updated: 2022/10/26 16:50:40 by ldinaut          ###   ########.fr        #
+#    Updated: 2022/10/28 11:17:46 by ldinaut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	brain
+NAME	=	recap
 
-SRCS_FILES	=	main.cpp
+SRCS_FILES	=	main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp \
+				MateriaSource.cpp 
 
-INC_FILES	=	AMateria.hpp ICharacter.hpp Character.hpp Ice.hpp
+INC_FILES	=	AMateria.hpp ICharacter.hpp Character.hpp Ice.hpp Cure.hpp \
+				IMateriaSource.hpp MateriaSource.hpp
 
 SRCS	=	$(addprefix srcs/, $(SRCS_FILES))
 
@@ -22,7 +24,7 @@ INCS	=	$(addprefix includes/, $(INC_FILES))
 
 CXX	=	c++
 
-CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I./includes
+CPPFLAGS	=	-Wall -Wextra -Werror -std=c++98 -I./includes -g3
 
 OBJS_FILES	=	$(SRCS_FILES:%.cpp=%.o)
 

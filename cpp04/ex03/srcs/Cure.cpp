@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 17:47:09 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/10/26 18:25:47 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/10/27 16:31:42 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,18 @@ Cure::Cure() : AMateria("cure")
 Cure::~Cure()
 {
 	std::cout << "Cure destructor called" << std::endl;
+}
+
+Cure::Cure(Cure const &copy) : AMateria(copy)
+{
+	std::cout << "Cure copy constructor called" << std::endl;
+	*this = copy;
+}
+
+Cure	&Cure::operator=(Cure const &egal)
+{
+	(void)egal;
+	return (*this);
 }
 
 AMateria *Cure::clone() const
