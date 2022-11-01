@@ -1,0 +1,45 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/01 15:03:37 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/11/01 17:51:29 by ldinaut          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <iostream>
+#include <exception>
+
+class Bureaucrat
+{
+	public :
+		Bureaucrat();
+		Bureaucrat(std::string name, unsigned int grade);
+		~Bureaucrat();
+		Bureaucrat(const Bureaucrat &copy);
+		Bureaucrat &operator=(const Bureaucrat &egal);
+
+		const std::string getName() const;
+		unsigned int getGrade() const;
+		void decrementGrade();
+		void incrementGrade();
+
+		class GradeTooHighException : public std::exception
+		{
+			const char *what() const throw();
+		};
+
+		class GradeTooLowException : public std::exception
+		{
+			const char *what() const throw();
+		};
+
+	private :
+		const std::string	_name;
+		unsigned int		_grade;
+};
+
+std::ostream &operator<<(std::ostream &os, const Bureaucrat &buro);
