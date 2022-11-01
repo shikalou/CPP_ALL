@@ -6,15 +6,15 @@
 #    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 18:04:23 by ldinaut           #+#    #+#              #
-#    Updated: 2022/11/01 15:03:31 by ldinaut          ###   ########.fr        #
+#    Updated: 2022/11/01 18:57:39 by ldinaut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	bureaucrat
 
-SRCS_FILES	=	main.cpp Bureaucrat.cpp
+SRCS_FILES	=	main.cpp Bureaucrat.cpp Form.cpp
 
-INC_FILES	=	Bureaucrat.hpp
+INC_FILES	=	Bureaucrat.hpp Form.hpp
 
 SRCS	=	$(addprefix srcs/, $(SRCS_FILES))
 

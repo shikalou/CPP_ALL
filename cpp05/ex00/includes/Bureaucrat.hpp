@@ -6,9 +6,12 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:03:37 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/01 17:51:29 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/01 18:39:21 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef BUREAUCRAT_HPP
+#define BUREAUCRAT_HPP
 
 #include <iostream>
 #include <exception>
@@ -43,3 +46,5 @@ class Bureaucrat
 };
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &buro);
+
+#endif
