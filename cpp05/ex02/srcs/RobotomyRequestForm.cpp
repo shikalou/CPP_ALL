@@ -6,14 +6,14 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 19:22:20 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/03 16:09:39 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/03 17:22:23 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 #include "Bureaucrat.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(Bureaucrat &buro) : Form("RobotomyRequestForm", 72, 45), _target(buro)
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form("RobotomyRequestForm", 72, 45), _target(target)
 {
 
 }
@@ -44,7 +44,7 @@ void	RobotomyRequestForm::execute(Bureaucrat const &executor) const
 
 	int i = (rand() % 2);
 	if (i == 0)
-		std::cout << _target.getName() << " has been robotomized successfully." << std::endl;
+		std::cout << _target << " has been robotomized successfully." << std::endl;
 	else
-		std::cout << _target.getName() << "'s robotomy has failed." << std::endl;
+		std::cout << _target << "'s robotomy has failed." << std::endl;
 }

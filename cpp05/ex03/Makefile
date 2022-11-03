@@ -6,17 +6,17 @@
 #    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/28 18:04:23 by ldinaut           #+#    #+#              #
-#    Updated: 2022/11/02 19:28:38 by ldinaut          ###   ########.fr        #
+#    Updated: 2022/11/03 16:35:52 by ldinaut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	bureaucrat
 
 SRCS_FILES	=	main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp \
-				PresidentialPardonForm.cpp RobotomyRequestForm.cpp
+				PresidentialPardonForm.cpp RobotomyRequestForm.cpp Intern.cpp
 
 INC_FILES	=	Bureaucrat.hpp Form.hpp ShrubberyCreationForm.hpp \
-				PresidentialPardonForm.hpp RobotomyRequestForm.hpp
+				PresidentialPardonForm.hpp RobotomyRequestForm.hpp Intern.hpp
 
 SRCS	=	$(addprefix srcs/, $(SRCS_FILES))
 

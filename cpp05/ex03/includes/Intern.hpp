@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 18:33:11 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/03 17:23:08 by ldinaut          ###   ########.fr       */
+/*   Created: 2022/11/03 16:34:11 by ldinaut           #+#    #+#             */
+/*   Updated: 2022/11/03 16:47:11 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERYCREATIONFORM_HPP
-#define SHRUBBERYCREATIONFORM_HPP
+#ifndef INTERN_HPP
+#define INTERN_HPP
 
 #include <iostream>
-#include <fstream>
-#include "Form.hpp"
+class Form;
 
-class	ShrubberyCreationForm : public Form
+class Intern
 {
 	public:
-		ShrubberyCreationForm(std::string target);
-		~ShrubberyCreationForm();
-		ShrubberyCreationForm(const ShrubberyCreationForm &copy);
-		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &egal);
+		Intern();
+		~Intern();
+		Intern(Intern const &copy);
+		Intern &operator=(Intern const &egal);
 
-		void	execute(Bureaucrat const &executor) const;
-
+		Form *makeForm(std::string formName, std::string targetName);
 	private:
-		std::string _target;
 };
+
+
 
 #endif

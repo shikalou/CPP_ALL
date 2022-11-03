@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 19:17:00 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/03 15:51:48 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/03 17:24:00 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@
 class	PresidentialPardonForm : public Form
 {
 	public:
-		PresidentialPardonForm(Bureaucrat &buro);
+		PresidentialPardonForm(std::string target);
 		~PresidentialPardonForm();
 		PresidentialPardonForm(const PresidentialPardonForm &copy);
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &egal);
 
 		void	execute(Bureaucrat const &executor) const;
 	private:
-		Bureaucrat &_target;
+		std::string _target;
 };
 
 #endif

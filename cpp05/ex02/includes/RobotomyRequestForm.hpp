@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 19:15:17 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/03 15:51:53 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/03 17:21:20 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@
 class	RobotomyRequestForm : public Form
 {
 	public:
-		RobotomyRequestForm(Bureaucrat &buro);
+		RobotomyRequestForm(std::string target);
 		~RobotomyRequestForm();
 		RobotomyRequestForm(const RobotomyRequestForm &copy);
 		RobotomyRequestForm &operator=(const RobotomyRequestForm &egal);
 
 		void	execute(Bureaucrat const &executor) const;
 	private:
-		Bureaucrat &_target;
+		std::string _target;
 };
 
 #endif

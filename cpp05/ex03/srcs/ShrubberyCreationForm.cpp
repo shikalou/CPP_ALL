@@ -6,14 +6,14 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 18:35:15 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/03 15:52:20 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/03 17:23:36 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 #include "Bureaucrat.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(Bureaucrat &buro) : Form("ShrubberyCreationForm", 145, 137), _target(buro)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("ShrubberyCreationForm", 145, 137), _target(target)
 {
 }
 
@@ -39,7 +39,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 		throw (GradeTooHighException());
 
 	std::ofstream	outfile;
-	std::string		file = _target.getName() + "_shrubbery";
+	std::string		file = _target + "_shrubbery";
 	
 	outfile.open(file.c_str());
 	if (!outfile.is_open())

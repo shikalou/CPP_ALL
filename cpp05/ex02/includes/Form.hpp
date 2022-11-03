@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 18:19:52 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/03 15:51:31 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/03 17:55:22 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Form
 		unsigned int		getGradeS() const;
 		unsigned int		getGradeE() const;
 		void				beSigned(Bureaucrat &buro);
-		virtual void		execute(Bureaucrat const &exectutor) const = 0;
+		virtual void		execute(Bureaucrat const &executor) const = 0;
 		
 
 		class GradeTooHighException : public std::exception
