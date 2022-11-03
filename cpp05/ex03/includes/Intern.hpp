@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 16:34:11 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/03 16:47:11 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/03 21:12:02 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ class Intern
 		Intern &operator=(Intern const &egal);
 
 		Form *makeForm(std::string formName, std::string targetName);
+		Form *newShruberry(std::string targetName);
+		Form *newRobotomy(std::string targetName);
+		Form *newPresidential(std::string targetName);
 	private:
 };
 
