@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 19:15:17 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/02 19:16:16 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/03 11:55:10 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class	RobotomyRequestForm : public Form
 {
 	public:
-		RobotomyRequestForm(std::string name = "default", unsigned int sign = 145, unsigned int exec = 137);
+		RobotomyRequestForm(Bureaucrat &buro);
 		~RobotomyRequestForm();
 		RobotomyRequestForm(const RobotomyRequestForm &copy);
 		RobotomyRequestForm &operator=(const RobotomyRequestForm &egal);

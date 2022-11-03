@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:03:37 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/01 19:29:10 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/03 13:20:42 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Bureaucrat
 		void				decrementGrade();
 		void				incrementGrade();
 		void				signForm(Form &doc);
-
+		void				executeForm(Form const & form);
 
 		class GradeTooHighException : public std::exception
 		{

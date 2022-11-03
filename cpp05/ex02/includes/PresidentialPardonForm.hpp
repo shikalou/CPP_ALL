@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 19:17:00 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/02 19:37:41 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/03 12:35:26 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@
 class	PresidentialPardonForm : public Form
 {
 	public:
-		PresidentialPardonForm(std::string name = "default", unsigned int sign = 145, unsigned int exec = 137);
+		PresidentialPardonForm(Bureaucrat &buro);
 		~PresidentialPardonForm();
 		PresidentialPardonForm(const PresidentialPardonForm &copy);
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &egal);
 
 		void	execute(Bureaucrat const &executor);
 	private:
+		Bureaucrat &_target;
 };
 
 #endif
