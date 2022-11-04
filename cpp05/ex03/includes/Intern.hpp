@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 16:34:11 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/03 21:12:02 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/04 13:40:29 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,13 @@ class Intern
 		Form *newShruberry(std::string targetName);
 		Form *newRobotomy(std::string targetName);
 		Form *newPresidential(std::string targetName);
+
+		class FormNameNotFound : public std::exception
+		{
+			const char *what() const throw();
+		};
+
 	private:
 };
-
-
 
 #endif

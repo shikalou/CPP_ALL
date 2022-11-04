@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 18:19:52 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/03 17:55:33 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/04 15:04:22 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Form
 {
 	public :
 		Form(std::string name = "default", unsigned int sign = 150, unsigned int exec = 150);
-		~Form();
+		virtual ~Form();
 		Form(const Form &copy);
 		Form &operator=(const Form &egal);
 
