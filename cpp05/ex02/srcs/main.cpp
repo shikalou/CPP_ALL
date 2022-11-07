@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 11:55:47 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/03 16:15:45 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/07 17:23:20 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ int	main(void)
 	Bureaucrat Lucie("Lucie", 130);
 	Bureaucrat Julien("Julien", 4);
 
-	PresidentialPardonForm president(Medhi);
+	PresidentialPardonForm president("Medhi");
 	Julien.executeForm(president);
 
-	ShrubberyCreationForm arbre(Julien);
+	ShrubberyCreationForm arbre("Julien");
 	Lucie.executeForm(arbre);
 
-	RobotomyRequestForm bot(Lucie);
+	RobotomyRequestForm bot("Lucie");
 	Medhi.executeForm(bot);
 	for (int i = 0; i <= 6; i++)
 		Medhi.incrementGrade();
