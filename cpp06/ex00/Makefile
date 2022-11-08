@@ -6,15 +6,15 @@
 #    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/07 16:44:59 by ldinaut           #+#    #+#              #
-#    Updated: 2022/11/07 17:17:14 by ldinaut          ###   ########.fr        #
+#    Updated: 2022/11/08 13:57:04 by ldinaut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ex00
+NAME	=	convert
 
-SRCS_FILES	=	main.cpp
+SRCS_FILES	=	main.cpp Convert.cpp
 
-INC_FILES	=	
+INC_FILES	=	Convert.hpp
 
 SRCS	=	$(addprefix srcs/, $(SRCS_FILES))
 

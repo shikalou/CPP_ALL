@@ -1,6 +1,7 @@
 # Prerequisites
 objs/
 school/
+school2/
 .vscode
 *.d
 *.o
@@ -23,3 +24,4 @@ fragTrap
 diamondTrap
 animals
 bureaucrat
+convert
