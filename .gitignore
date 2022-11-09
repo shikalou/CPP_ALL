@@ -8,6 +8,7 @@ school2/
 *.lib
 *.a
 *.out
+
 # Executables
 megaphone
 phonebook
@@ -25,3 +26,5 @@ diamondTrap
 animals
 bureaucrat
 convert
+base
+serial
