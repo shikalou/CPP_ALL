@@ -6,15 +6,15 @@
 #    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/18 19:52:05 by ldinaut           #+#    #+#              #
-#    Updated: 2022/11/18 19:57:03 by ldinaut          ###   ########.fr        #
+#    Updated: 2022/11/20 14:59:29 by ldinaut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	mutant
 
-SRCS_FILES	=	main.cpp MutantStack.cpp
+SRCS_FILES	=	main.cpp
 
-INC_FILES	=	MutantStack.hpp
+INC_FILES	=	MutantStack.hpp MutantStack.tpp
 
 SRCS	=	$(addprefix srcs/, $(SRCS_FILES))
 
