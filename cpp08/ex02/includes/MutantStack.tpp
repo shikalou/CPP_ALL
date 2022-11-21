@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 14:58:52 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/20 22:34:52 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/21 16:28:16 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,28 +26,28 @@ MutantStack<T>::~MutantStack()
 }
 
 template <typename T>
-MutantStack<T>::MutantStack(const MutantStack &copy)
+MutantStack<T>::MutantStack(const MutantStack<T> &copy)
 {
 	*this = copy;
 }
 
 template <typename T>
-MutantStack<T>	&MutantStack::operator=(const MutantStack &egal)
+MutantStack<T>	&MutantStack<T>::operator=(const MutantStack &egal)
 {
 	(void)egal;
 	return (*this);
 }
 
 template <typename T>
-MutantStack<T>::iterator	MutantStack::begin()
+typename MutantStack<T>::iterator MutantStack<T>::begin()
 {
-	return (std::begin(c));
+	return (this->c.begin());
 }
 
 template <typename T>
-MutantStack<T>::iterator	MutantStack::end()
+typename MutantStack<T>::iterator MutantStack<T>::end()
 {
-	return (std::end(c));
+	return (this->c.end());
 }
 
 #endif

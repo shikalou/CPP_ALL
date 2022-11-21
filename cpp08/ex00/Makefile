@@ -6,7 +6,7 @@
 #    By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/15 10:44:41 by ldinaut           #+#    #+#              #
-#    Updated: 2022/11/15 15:52:04 by ldinaut          ###   ########.fr        #
+#    Updated: 2022/11/21 16:29:52 by ldinaut          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	=	easyfind
 
 SRCS_FILES	=	main.cpp
 
-INC_FILES	=	easyfind.hpp easyfind.tpp
+INC_FILES	=	easyfind.hpp
 
 SRCS	=	$(addprefix srcs/, $(SRCS_FILES))
 
