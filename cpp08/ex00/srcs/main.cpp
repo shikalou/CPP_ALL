@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:50:10 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/16 19:15:00 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/23 00:28:28 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,17 @@
 int	main()
 {
 	typedef std::vector<int>::iterator it;
-	std::cout << "AVEC UN VECTOR DE INT" << std::endl << std::endl << std::endl;
+	std::vector<int> toto;
+	try
+	{	std::cout << "try with an empty tab !" << std::endl << std::endl;
+		it ret = easyfind(toto, 5);
+		std::cout << *ret << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	std::cout <<std::endl << "AVEC UN VECTOR DE INT" << std::endl << std::endl << std::endl;
 	std::vector<int> tab(3, 6);
 	tab.push_back(1);
 	for(int i = 0; i < (int)tab.size(); i++)
@@ -82,7 +92,7 @@ int	main()
 	}
 
 	std::cout << std::endl << "add a new int 10 to the tab and try again" << std::endl << std::endl;
-	tab2.push_back(10);
+	tab2.push_front(10);
 
 	for(int i = 0; i < (int)tab2.size(); i++)
 	{
