@@ -6,7 +6,7 @@
 /*   By: ldinaut <ldinaut@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 15:50:08 by ldinaut           #+#    #+#             */
-/*   Updated: 2022/11/16 19:10:49 by ldinaut          ###   ########.fr       */
+/*   Updated: 2022/11/22 23:13:46 by ldinaut          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define EASYFIND_HPP
 
 #include <iostream>
+#include <algorithm>
 
 class NoOccurence : public std::exception
 {
@@ -23,14 +24,19 @@ class NoOccurence : public std::exception
 template <typename T>
 typename T::iterator	easyfind(T &tab, int j)
 {
-	typename T::iterator it;
+	typename T::iterator it = std::find(tab.begin(), tab.end(), j);
 
-	for (it = tab.begin(); it != tab.end(); ++it)
-	{
-		if (*it == j)
-			return (it);
-	}
+	if (it != tab.end())
+		return (it);
 	throw (NoOccurence());
+	
+	// typename T::iterator it;
+	// for (it = tab.begin(); it != tab.end(); ++it)
+	// {
+	// 	if (*it == j)
+	// 		return (it);
+	// }
+	// throw (NoOccurence());
 }
 
 #endif
